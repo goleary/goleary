@@ -1,0 +1,27 @@
+.card {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.image {
+  max-width: 300px;
+}
+
+.summary {
+  color: #666;
+  font-size: 0.8em;
+}
+
+.tags {
+}
+
+.tag {
+  color: rgb(75, 75, 75);
+  margin-right: 5px;
+  padding: 0 5px 1px;
+  font-size: smaller;
+  background-color: lightgray;
+  border-radius: 3px;
+}

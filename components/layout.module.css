@@ -23,3 +23,11 @@
 .backToHome {
   margin: 3rem 0 0;
 }
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 300px;
+  width: 100%;
+}

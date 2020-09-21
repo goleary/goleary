@@ -1,0 +1,7 @@
+.byLine {
+  display: flex;
+  flex-direction: row;
+  align-items: row;
+}
+
+
