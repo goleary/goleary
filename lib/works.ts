@@ -29,7 +29,7 @@ export function getSortedWorksData() {
   });
   // Sort posts by toDate
   return allPostsData.sort((a, b) => {
-    if (a.toDate < b.toDate) {
+    if (a.date < b.date) {
       return 1;
     } else {
       return -1;
