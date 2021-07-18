@@ -5,7 +5,7 @@ import remark from "remark";
 import html from "remark-html";
 import { WorkProps } from "../types";
 
-const worksDirectory = path.join(process.cwd(), "works");
+const worksDirectory = path.join(process.cwd(), "content/works");
 
 export function getSortedWorksData() {
   // Get file names under /posts
