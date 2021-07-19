@@ -60,6 +60,9 @@ export default function Layout({
           <Link href="/works">
             <a>Works</a>
           </Link>
+          <Link href="/history">
+            <a>History</a>
+          </Link>
           <Link href="/photos">
             <a>Photos</a>
           </Link>
