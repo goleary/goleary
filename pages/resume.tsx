@@ -56,29 +56,6 @@ const resume: Resume = {
   ],
 };
 
-const workExperiences = [
-  {
-    name: "Upnext",
-    position: "Founding Engineer",
-    location: "Remote",
-    timePeriod: "August 2020 - Present",
-  },
-  {
-    name: "Indie Hacker",
-    timePeriod: "August 2019 - Present",
-  },
-  {
-    name: "Independent Contractor",
-    timePeriod: "August 2019 - Present",
-  },
-  {
-    name: "Microsoft",
-    position: "Program Manager",
-    location: "Bellevue, Washington",
-    timePeriod: "March 2015 - May 2019",
-  },
-];
-
 // TODO: maybe I should reduce this to key skills
 
 const skills = [
@@ -100,13 +77,13 @@ const skills = [
 const ResumePage: React.FC = () => {
   const sectionHeaderStyles = {
     marginTop: 24,
-    color: blue[700],
+    color: grey[900],
   };
 
   return (
     <div
       style={{
-        maxWidth: 800,
+        maxWidth: 1200,
         margin: "auto",
         paddingLeft: 12,
         paddingRight: 12,
@@ -125,13 +102,14 @@ const ResumePage: React.FC = () => {
           margin: "auto",
           display: "flex",
           flexDirection: "row",
-          gap: 24,
+          gap: 30,
         }}
       >
         <div style={{ flex: 1 }}>
           <h2 style={sectionHeaderStyles}>Experience</h2>
           <Item
             title="Upnext"
+            url="https://getupnext.com"
             subtitle="Founding Engineer"
             timePeriod="Aug 2020 - present"
           >
@@ -206,46 +184,6 @@ const ResumePage: React.FC = () => {
               ]}
             />
           </Item>
-          <h2 style={sectionHeaderStyles}>Projects</h2>
-          <Item
-            title="Reconcile"
-            subtitle="Creator"
-            timePeriod="Nov 2019 - present"
-          ></Item>
-          <Item
-            title="PNW Current Prediction Map"
-            subtitle="Creator"
-            timePeriod="Nov 2019 - present"
-          ></Item>
-          <Item
-            title="COVID Tracking Project"
-            subtitle="Data Viz Engineer"
-            timePeriod="Mar 2020 - August 2020"
-          >
-            <ul>
-              <li>
-                Created statically & dynamically rendered data vizualizations
-              </li>
-              <li>
-                Built custom D3 chart components to display our data at a
-                National & State level
-              </li>
-              <li>
-                Created a framework for building Scrollytelling experiences on
-                the website
-              </li>
-            </ul>
-            <Tags tags={["React", "Gatsby", "GraphQL", "D3", "Leaflet"]} />
-          </Item>
-          <Item
-            title="Roadgauge"
-            subtitle="Creator"
-            timePeriod="Nov 2019 - present"
-          >
-            <Tags
-              tags={["React", "Firebase", "Redux", "serverless functions"]}
-            />
-          </Item>
 
           <h2 style={sectionHeaderStyles}>Education</h2>
           <Item
@@ -259,15 +197,47 @@ const ResumePage: React.FC = () => {
             </ul>
           </Item>
         </div>
-        <div style={{ width: "25%" }}>
+        <div style={{ width: "35%" }}>
+          <h2 style={sectionHeaderStyles}>Projects</h2>
+          <Item
+            title="Reconcile"
+            url="https://reconcile.app"
+            timePeriod="Nov 2019 - present"
+          ></Item>
+          <Item
+            title="Current Map"
+            url="https://gabeoleary.com/current-map"
+            timePeriod="Mar 2022"
+          ></Item>
+          <Item
+            title="COVID Tracking Project"
+            url="https://covidtracking.com/"
+            timePeriod="2020"
+          >
+            <ul>
+              <li>Built custom charts</li>
+              <li>Createdm scrollytelling framework</li>
+            </ul>
+            <Tags tags={["React", "Gatsby", "GraphQL", "D3", "Leaflet"]} />
+          </Item>
+          <Item
+            title="Roadgauge"
+            url="https://roadgauge.app"
+            timePeriod="Nov 2019 - present"
+          >
+            <Tags
+              tags={["React", "Firebase", "Redux", "serverless functions"]}
+            />
+          </Item>
           <h2 style={sectionHeaderStyles}>Awards</h2>
           <Item
-            title="2nd place in HERE Mapathon"
-            subtitle="HERE"
+            title="HERE Mapathon"
+            url="https://www.agorize.com/en/challenges/heremapathon/pages/finals?lang=en"
+            subtitle="2nd place"
             timePeriod="Dec 2019"
           >
             Developed an interactive map using US census data to demonstrate the
-            economic loss due to commuting
+            economic loss caused by commuting
           </Item>
 
           <h2 style={sectionHeaderStyles}>Skills</h2>

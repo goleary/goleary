@@ -3,25 +3,38 @@ import { grey } from "@mui/material/colors";
 
 type Props = {
   title: string;
+  url?: string;
   subtitle?: string;
   timePeriod: string;
+  vertical?: boolean;
 };
 
 const Item: React.FC<PropsWithChildren<Props>> = ({
   children,
   title,
+  url,
   subtitle,
   timePeriod,
+  vertical,
 }) => {
   return (
     <div style={{ marginTop: 16, marginBottom: 16 }}>
-      <div style={{ color: grey[900], display: "flex", flexDirection: "row" }}>
-        <div style={{ fontWeight: "bold" }}>{title}</div>
+      <div
+        style={{
+          color: grey[900],
+          display: "flex",
+          flexDirection: vertical ? "column" : "row",
+          alignItems: vertical ? "initial" : "center",
+        }}
+      >
+        <div style={{ fontWeight: "bold" }}>
+          {url ? <a href={url}>{title}</a> : title}
+        </div>
         <div
           style={{
             color: grey[800],
             flex: 1,
-            textAlign: "right",
+            textAlign: vertical ? "left" : "right",
             fontSize: "0.9rem",
           }}
         >
